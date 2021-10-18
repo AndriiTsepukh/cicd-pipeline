@@ -4,14 +4,14 @@ pipeline {
     stage('Application Build') {
       steps {
         sh '''chmod +x -R ${env.WORKSPACE}
-./scripts/build.sh'''
+'''
+        sh './scripts/build.sh'
       }
     }
 
     stage('Tests') {
       steps {
-        sh '''chmod +x -R ${env.WORKSPACE}
-./scripts/test.sh'''
+        sh './scripts/test.sh'
       }
     }
 
