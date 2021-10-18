@@ -17,7 +17,7 @@ pipeline {
 
     stage('DockerImage Build') {
       steps {
-        sh 'docker build -t myuniquebuildimage'
+        sh 'docker build -t myuniquebuildimage .'
       }
     }
 
