@@ -23,7 +23,7 @@ pipeline {
 
     stage('Docker Image push') {
       steps {
-        sh 'docker image push'
+        sh 'docker image push "myuniquebuildimage:latest"'
       }
     }
 
