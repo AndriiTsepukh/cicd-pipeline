@@ -17,13 +17,13 @@ pipeline {
 
     stage('DockerImage Build') {
       steps {
-        sh 'docker build -t tsepukh/myuniquebuildimage:0.0.2 .'
+        sh 'docker build -t tsepukh/myuniquebuildimage .'
       }
     }
 
     stage('Docker Image push') {
       steps {
-        sh 'sudo docker image push "tsepukh/myuniquebuildimage:0.0.2"'
+        sh 'docker image push tsepukh/myuniquebuildimage:latest'
       }
     }
 
